@@ -1,23 +1,58 @@
 
-#load packages
+#load packages ------
+
 library(tidyverse)
 library(here)
 library(gt) # for summary tables
+library(webshot) # for saving final table as .png image; requires 'webshot::install_phantomjs()' to install PhantomJS 
 
-#load data
-albums <- readRDS(here("static", "data", "albums.RDS"))
+#load data --------
 
-#albums <- readRDS("../../static/data/albums.RDS")
+albums <- readr::read_csv('https://raw.githubusercontent.com/lynleyaldridge/tidytuesday/main/2020/2020-week40/data/albums.csv')
 
-# https://blogdown-demo.rbind.io/2018/02/27/r-file-paths/
-# look at what I did for resources and modify
+RDS(here("2020", "2020-week40", "data", "albums.RDS"))
+
+write.csv(albums, here("2020", "2020-week40", "data", "albums.csv"))
+albums <- read.csv(here("2020", "2020-week40", "data", "albums.csv"))
+
+
+# githubURL <- 'https://github.com/lynleyaldridge/tidytuesday/blob/main/2020/2020-week40/data/albums.RDS'
+# load(url(githubURL))
+
+
+# define functions ------
+
+bar_chart <- function(value, color = "#795548"){
+  glue::glue("<span style=\"display: inline-block; direction: ltr; border-radius: 4px; padding-right: 2px; background-color: {color}; color: {color}; width: {value}%\"> &nbsp; </span>") %>% 
+    as.character() %>% 
+    gt::html()
+}
+
+# format data frame -------
+
+albums_with_urls  <- albums %>%
+  filter(artist == "Taylor Swift") %>%
+  drop_na() %>%
+  mutate(percent_plot = map(other_percent, ~bar_chart(value = .x))) %>% 
+  
+  # create new column combining values from title and released columns
+  mutate(title_released = paste0("**", title, "**", 
+                                 "<br>", year)) %>% 
+  
+  # create new column containing urls to album art
+  mutate(img = paste0("https://raw.githubusercontent.com/lynleyaldridge/tidytuesday/main/2020/2020-week40/img/", title, ".jpg")) %>%
+  
+  # select columns for inclusion in table in desired order  
+  select(img, title_released, US_chart, UK_chart, WW_sales, US_sales, other_sales, other_percent, percent_plot)
+
+# create table --------
 
 gt(albums_with_urls) %>%
   
   # create headings spanning multiple columns
   tab_spanner(label = "Chart position", columns = vars(US_chart, UK_chart)) %>%
-  tab_spanner(label = "Sales ($ million)", columns = vars(WW_sales, US_sales)) %>%
-  tab_spanner(label = "US sales", columns = vars(US_percent, percent_plot)) %>%
+  tab_spanner(label = "Sales ($ million)", columns = vars(WW_sales, US_sales, other_sales)) %>%
+  tab_spanner(label = "International sales", columns = vars(other_percent, percent_plot)) %>%
   
   # set column labels 
   cols_label(
@@ -29,10 +64,11 @@ gt(albums_with_urls) %>%
         </div>"),
     US_chart = "US",
     UK_chart = "UK",
-    WW_sales = "World",
+    WW_sales = "Total",
     US_sales = "US",
-    US_percent = "%",
-    percent_plot = "Plot") %>%
+    other_sales = "Intl",
+    other_percent = "%",
+    percent_plot = "") %>%
   
   # format title_released column as markdown text
   fmt_markdown(columns = c("title_released")) %>%
@@ -53,7 +89,7 @@ gt(albums_with_urls) %>%
     weight = "bold"),
     locations = cells_column_spanners(spanners = vars("Chart position", 
                                                       "Sales ($ million)", 
-                                                      "US sales")))%>%
+                                                      "International sales")))%>%
   
   # color title and subtitle and set size
   tab_style(style = cell_text(color = "#795548", size = "large"),
@@ -68,8 +104,9 @@ gt(albums_with_urls) %>%
   
   tab_style(style = cell_text(align = 'right'),
             locations = cells_body(columns = c("WW_sales", 
-                                               "US_sales", 
-                                               "US_percent"))) %>%
+                                               "US_sales",
+                                               "other_sales",
+                                               "other_percent"))) %>%
   
   tab_style(style = cell_text(align = 'left'),
             locations = cells_body(columns = c("percent_plot"))) %>% 
@@ -80,15 +117,35 @@ gt(albums_with_urls) %>%
   
   # set width of columns
   cols_width(
-    vars("title_released", "percent_plot") ~ px(150)) %>%
+    vars("percent_plot") ~ px(150)) %>%
   
-  # remove label for plot column
-  cols_label(percent_plot = "") %>%
+  # set border color and width
+  tab_options(
+    container.width = px(675),
+    table.border.top.color = '#795548',
+    table.border.bottom.color = '#795548',
+    heading.border.bottom.color = '#795548',
+    column_labels.border.bottom.color = '#795548',
+    table_body.hlines.color = '#795548',
+    table_body.border.bottom.color = '#795548') %>%
   
   # create title for table, formatting as markdown
   tab_header(
-    title = md("**Taylor Swift's Speak Now sold primarily to US audiences, but her US percentage share of sales fell with each subsequent album**"),
+    title = md("**Taylor Swift's Speak Now sold primarily to US audiences, but international sales comprised an increasing proportion of her sales for each subsequent album**"),
     subtitle = md("*Peak chart position and sales by album and location*")) %>%
   
+  # create footnote for subtitle
+  tab_footnote(
+    footnote = md("<span style = 'color:#795548'>Excludes albums for which worldwide sales were unavailable - Taylor Swift and Folklore</span>"),
+    locations = cells_title(groups = "subtitle")) %>%
+  
+  # create footnote for international sales column
+  tab_footnote(
+    footnote = md("<span style = 'color:#795548'>International sales represent total worldwide sales excluding US sales</span>"),
+    locations = cells_column_labels(columns = "other_sales")) %>%
+  
   # create source note for table, formatting as md and applying color
-  tab_source_note(source_note = md("<span style = 'color:#795548'>Source: Billboard via Wikipedia, October 2020; excludes albums for which worldwide sales were unavailable <br>Table: Modified from Georgios Karamanis</span>")) 
+  tab_source_note(source_note = md("<span style = 'color:#795548'>Source: Billboard via Wikipedia, October 2020; Table: Modified from Georgios Karamanis</span>")) %>%
+
+# save a copy of plot (remove commenting to use this part of the code)
+gtsave(here::here("2020", "2020-week40", "plots", "swift-albums.png"))
