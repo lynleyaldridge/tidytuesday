@@ -42,11 +42,13 @@ albums_with_urls  <- albums %>%
 
 gt(albums_with_urls) %>%
   
-  # create headings spanning multiple columns
-  tab_spanner(label = "Chart position", columns = vars(US_chart, UK_chart)) %>%
-  tab_spanner(label = "Sales ($ million)", columns = vars(WW_sales, US_sales, other_sales)) %>%
-  tab_spanner(label = "International sales", columns = vars(other_percent, percent_plot)) %>%
+  # format title_released column as markdown text
+  fmt_markdown(columns = c("title_released")) %>%
   
+  # transform text in img column to display and appropriately size images
+  text_transform(locations = cells_body(vars(img)),
+                 fn = function(x){web_image(url = x, height = 80)}) %>%
+ 
   # set column labels 
   cols_label(
     img = "",
@@ -63,12 +65,10 @@ gt(albums_with_urls) %>%
     other_percent = "%",
     percent_plot = "") %>%
   
-  # format title_released column as markdown text
-  fmt_markdown(columns = c("title_released")) %>%
-  
-  # transform text in img column to display and appropriately size images
-  text_transform(locations = cells_body(vars(img)),
-                 fn = function(x){web_image(url = x, height = 80)}) %>%
+  # create headings spanning multiple columns
+  tab_spanner(label = "Chart position", columns = vars(US_chart, UK_chart)) %>%
+  tab_spanner(label = "Sales ($ million)", columns = vars(WW_sales, US_sales, other_sales)) %>%
+  tab_spanner(label = "International sales", columns = vars(other_percent, percent_plot)) %>%
   
   # color column labels and cells in table body 
   tab_style(style = cell_text(color = "#795548"),
@@ -83,13 +83,6 @@ gt(albums_with_urls) %>%
     locations = cells_column_spanners(spanners = vars("Chart position", 
                                                       "Sales ($ million)", 
                                                       "International sales")))%>%
-  
-  # color title and subtitle and set size
-  tab_style(style = cell_text(color = "#795548", size = "large"),
-            locations = cells_title(groups = "title")) %>%
-  
-  tab_style(style = cell_text(color = "#795548", size = "medium"),
-            locations = cells_title(groups = "subtitle")) %>%
   
   # horizontal alignment of cells 
   tab_style(style = cell_text(align = 'center'),
@@ -107,21 +100,7 @@ gt(albums_with_urls) %>%
   # vertical alignment of cells
   tab_style(style = cell_text(v_align = "middle"), 
             locations = cells_body()) %>%
-  
-  # set width of columns
-  cols_width(
-    vars("percent_plot") ~ px(150)) %>%
-  
-  # set full table width and border color
-  tab_options(
-    container.width = px(675),
-    table.border.top.color = '#795548',
-    table.border.bottom.color = '#795548',
-    heading.border.bottom.color = '#795548',
-    column_labels.border.bottom.color = '#795548',
-    table_body.hlines.color = '#795548',
-    table_body.border.bottom.color = '#795548') %>%
-  
+
   # create title for table, formatting as markdown
   tab_header(
     title = md("**Taylor Swift's Speak Now sold primarily to US audiences, but international sales comprised an increasing proportion of her sales for each subsequent album**"),
@@ -138,7 +117,28 @@ gt(albums_with_urls) %>%
     locations = cells_column_labels(columns = "other_sales")) %>%
   
   # create source note for table, formatting as md and applying color
-  tab_source_note(source_note = md("<span style = 'color:#795548'>Source: Billboard via Wikipedia, October 2020; Table: Modified from Georgios Karamanis</span>")) 
+  tab_source_note(source_note = md("<span style = 'color:#795548'>Source: Billboard via Wikipedia, October 2020; Table: Modified from Georgios Karamanis</span>")) %>%
+  
+  # color title and subtitle and set size
+  tab_style(style = cell_text(color = "#795548", size = "large"),
+            locations = cells_title(groups = "title")) %>%
+  
+  tab_style(style = cell_text(color = "#795548", size = "medium"),
+            locations = cells_title(groups = "subtitle")) %>%
+  
+  # set width of columns
+  cols_width(
+    vars("percent_plot") ~ px(150)) %>%
+  
+  # set full table width and border color
+  tab_options(
+    container.width = px(675),
+    table.border.top.color = '#795548',
+    table.border.bottom.color = '#795548',
+    heading.border.bottom.color = '#795548',
+    column_labels.border.bottom.color = '#795548',
+    table_body.hlines.color = '#795548',
+    table_body.border.bottom.color = '#795548') 
 
 # %>%
 
