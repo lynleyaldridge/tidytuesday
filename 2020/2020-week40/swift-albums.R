@@ -9,7 +9,7 @@ library(webshot) # for saving final table as .png image; requires 'webshot::inst
 
 albums <- read.csv('https://raw.githubusercontent.com/lynleyaldridge/tidytuesday/main/2020/2020-week40/data/albums.csv')
 
-# define functions ------
+# define bar_chart function ------
 # adapted from: https://themockup.blog/posts/2020-10-31-embedding-custom-features-in-gt-tables/
 
 bar_chart <- function(value, color = "#795548"){
@@ -25,7 +25,7 @@ albums_with_urls  <- albums %>%
   filter(artist == "Taylor Swift") %>%
   drop_na() %>%
   
-  # create new column applying bar chart function to values in other_percent column
+  # create new column applying bar_chart function to values in other_percent column
   mutate(percent_plot = map(other_percent, ~bar_chart(value = .x))) %>% 
   
   # create new column combining values from title and released columns
