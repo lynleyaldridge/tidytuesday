@@ -2,18 +2,18 @@
 #load packages ------
 
 library(tidyverse)
-library(here)
 library(gt) # for summary tables
 library(webshot) # for saving final table as .png image; requires 'webshot::install_phantomjs()' to install PhantomJS 
 
 #load data --------
 
-albums <- readr::read_csv('https://raw.githubusercontent.com/lynleyaldridge/tidytuesday/main/2020/2020-week40/data/albums.csv')
+albums <- read.csv('https://raw.githubusercontent.com/lynleyaldridge/tidytuesday/main/2020/2020-week40/data/albums.csv')
 
-RDS(here("2020", "2020-week40", "data", "albums.RDS"))
+# albums <- readRDS(here("2020", "2020-week40", "data", "albums.RDS"))
+# albums <- read.csv(here("2020", "2020-week40", "data", "albums.csv"))
 
-write.csv(albums, here("2020", "2020-week40", "data", "albums.csv"))
-albums <- read.csv(here("2020", "2020-week40", "data", "albums.csv"))
+# write.csv(albums, here("2020", "2020-week40", "data", "albums.csv"))
+# albums <- read.csv(here("2020", "2020-week40", "data", "albums.csv"))
 
 
 # githubURL <- 'https://github.com/lynleyaldridge/tidytuesday/blob/main/2020/2020-week40/data/albums.RDS'
@@ -145,7 +145,9 @@ gt(albums_with_urls) %>%
     locations = cells_column_labels(columns = "other_sales")) %>%
   
   # create source note for table, formatting as md and applying color
-  tab_source_note(source_note = md("<span style = 'color:#795548'>Source: Billboard via Wikipedia, October 2020; Table: Modified from Georgios Karamanis</span>")) %>%
+  tab_source_note(source_note = md("<span style = 'color:#795548'>Source: Billboard via Wikipedia, October 2020; Table: Modified from Georgios Karamanis</span>")) 
+
+# %>%
 
 # save a copy of plot (remove commenting to use this part of the code)
-gtsave(here::here("2020", "2020-week40", "plots", "swift-albums.png"))
+# gtsave(here::here("2020", "2020-week40", "plots", "swift-albums.png"))
