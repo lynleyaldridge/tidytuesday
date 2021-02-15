@@ -9,18 +9,8 @@ library(webshot) # for saving final table as .png image; requires 'webshot::inst
 
 albums <- read.csv('https://raw.githubusercontent.com/lynleyaldridge/tidytuesday/main/2020/2020-week40/data/albums.csv')
 
-# albums <- readRDS(here("2020", "2020-week40", "data", "albums.RDS"))
-# albums <- read.csv(here("2020", "2020-week40", "data", "albums.csv"))
-
-# write.csv(albums, here("2020", "2020-week40", "data", "albums.csv"))
-# albums <- read.csv(here("2020", "2020-week40", "data", "albums.csv"))
-
-
-# githubURL <- 'https://github.com/lynleyaldridge/tidytuesday/blob/main/2020/2020-week40/data/albums.RDS'
-# load(url(githubURL))
-
-
 # define functions ------
+# adapted from: https://themockup.blog/posts/2020-10-31-embedding-custom-features-in-gt-tables/
 
 bar_chart <- function(value, color = "#795548"){
   glue::glue("<span style=\"display: inline-block; direction: ltr; border-radius: 4px; padding-right: 2px; background-color: {color}; color: {color}; width: {value}%\"> &nbsp; </span>") %>% 
@@ -29,10 +19,13 @@ bar_chart <- function(value, color = "#795548"){
 }
 
 # format data frame -------
+# adapted from: https://github.com/gkaramanis/tidytuesday/blob/master/2020-week40/beyonce-swift.R
 
 albums_with_urls  <- albums %>%
   filter(artist == "Taylor Swift") %>%
   drop_na() %>%
+  
+  # create new column applying bar chart function to values in other_percent column
   mutate(percent_plot = map(other_percent, ~bar_chart(value = .x))) %>% 
   
   # create new column combining values from title and released columns
@@ -119,7 +112,7 @@ gt(albums_with_urls) %>%
   cols_width(
     vars("percent_plot") ~ px(150)) %>%
   
-  # set border color and width
+  # set full table width and border color
   tab_options(
     container.width = px(675),
     table.border.top.color = '#795548',
@@ -149,5 +142,5 @@ gt(albums_with_urls) %>%
 
 # %>%
 
-# save a copy of plot (remove commenting to use this part of the code)
+# save a copy of plot (remove commenting and load here library to use this part of the code)
 # gtsave(here::here("2020", "2020-week40", "plots", "swift-albums.png"))
