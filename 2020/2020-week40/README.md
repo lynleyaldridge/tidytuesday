@@ -5,3 +5,5 @@ Tutorial:
 [https://lynleyaldridge.netlify.app/2021/02/14/summary-tables-using-gt/](https://lynleyaldridge.netlify.app/2021/02/14/summary-tables-using-gt/)
 
 ![](plots/swift-albums.png)
+
+![](plots/compare-sales.png)
