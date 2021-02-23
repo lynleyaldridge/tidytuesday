@@ -38,7 +38,7 @@ albums %>%
   
   tab_spanner(label = "Chart position", columns = vars(US_chart, 
                                                        UK_chart)) %>%
-  tab_spanner(label = "Sales ($ million)", columns = vars(US_sales,
+  tab_spanner(label = "Sales (millions)", columns = vars(US_sales,
                                                           WW_sales)) %>%
   
  # create summary rows for each group 
@@ -82,13 +82,13 @@ albums %>%
     color = "#795548",
     weight = "bold"),
     locations = cells_column_spanners(spanners = vars("Chart position", 
-                                                      "Sales ($ million)")))%>%
+                                                      "Sales (millions)")))%>%
   
   tab_header(
     title = md(
-      "**Taylor Swift has higher sales than Beyoncé, but owes a greater proportion of her success to US sales than Beyoncé**"),
+      "**Taylor Swift has sold more albums than Beyoncé, but owes a greater proportion of her success to US sales than Beyoncé**"),
     subtitle = md(
-      "*Peak chart position, sales, and US sales as a percentage of total sales by album*")) %>%
+      "*Peak chart position, copies sold, and US sales as a percentage of total sales by album*")) %>%
   
   tab_source_note(
     source_note = md("<span style = 'color:#795548'>Source: Billboard via Wikipedia, October 2020</span>")) %>%

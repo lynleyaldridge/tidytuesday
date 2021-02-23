@@ -67,7 +67,7 @@ gt(albums_with_urls) %>%
   
   # create headings spanning multiple columns
   tab_spanner(label = "Chart position", columns = vars(US_chart, UK_chart)) %>%
-  tab_spanner(label = "Sales ($ million)", columns = vars(WW_sales, US_sales, other_sales)) %>%
+  tab_spanner(label = "Sales (millions)", columns = vars(WW_sales, US_sales, other_sales)) %>%
   tab_spanner(label = "International sales", columns = vars(other_percent, percent_plot)) %>%
   
   # color column labels and cells in table body 
@@ -81,7 +81,7 @@ gt(albums_with_urls) %>%
     color = "#795548",
     weight = "bold"),
     locations = cells_column_spanners(spanners = vars("Chart position", 
-                                                      "Sales ($ million)", 
+                                                      "Sales (millions)", 
                                                       "International sales")))%>%
   
   # horizontal alignment of cells 
@@ -104,7 +104,7 @@ gt(albums_with_urls) %>%
   # create title for table, formatting as markdown
   tab_header(
     title = md("**Taylor Swift's Speak Now sold primarily to US audiences, but international sales comprised an increasing proportion of her sales for each subsequent album**"),
-    subtitle = md("*Peak chart position and sales by album and location*")) %>%
+    subtitle = md("*Peak chart position and number of copies sold by album and location*")) %>%
   
   # create footnote for subtitle
   tab_footnote(
