@@ -11,3 +11,6 @@ Tutorial for second table (code saved above as compare-sales.R):<br>
 ![](plots/swift-albums.png)
 
 ![](plots/compare-sales.png)
+
+![](plots/by-country.png)
+
