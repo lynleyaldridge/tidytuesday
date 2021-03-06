@@ -68,6 +68,7 @@ ggplot(occupation_race, aes(percent, minor_occupation)) +
   scale_x_continuous(limits = c(-2.5, 27.5), breaks = c(0, 5, 10, 15, 20, 25)) +
   theme_minimal() +
   theme(legend.position = "none",
+        text = element_text(family = "mono"),
         plot.title = element_markdown(size = 15),
         plot.subtitle = element_textbox_simple(size = 12),
         plot.title.position = "plot")+
