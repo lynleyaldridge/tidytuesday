@@ -11,3 +11,6 @@
 ![](2020/2020-week40/plots/compare-sales.png)
 
 ![](2020/2020-week40/plots/by-country.png)
+
+Test edit from new computer 
+

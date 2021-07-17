@@ -24,7 +24,7 @@ earn <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidyt
 
 # save to csv
 
-write_csv(employed, here("2021", "2021-week9", "data", "employed.csv"))
+write_csv(employed, here("2021", "2021-week09", "data", "employed.csv"))
 
 # explore data -------------------------------
 
@@ -187,7 +187,7 @@ ggplot(occupation_race, aes(percent, minor_occupation)) +
        and overrepresented in service and transportation, relative to <b style = 'color:#00BFC4'>all workers</b>",
        caption = "Data: U.S Bureau of Labor Statistics, Current Population Survey | Tidy Tuesday 2021, Week 9")
 
-
+# what colors are used in a plot -----
   
 # useful expression for seeing what colors are use to make a plot (plus other details)
 # source: https://stackoverflow.com/questions/25211078/what-are-the-default-plotting-colors-in-r-or-ggplot2
@@ -266,4 +266,11 @@ summary_gender <- employed %>%
 summary_gender %>%
   arrange(desc(percent_Women)) %>%
   gt(groupname_col = "race_gender")
-  
+
+# font choice-----
+# https://stackoverflow.com/questions/34522732/changing-fonts-in-ggplot2
+
+
+windowsFonts()
+
+
