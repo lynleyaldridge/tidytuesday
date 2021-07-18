@@ -50,11 +50,11 @@ scoobydoo %>%
   coord_flip() +
   scale_x_reordered() +
   scale_y_continuous(expand = c(0,0)) +
-  labs(title = "Have the motives of antagonists in Scooby Doo episodes changed over time?",
-       subtitle = "Theft was most common in the <span style = 'color:#128A84'>**1970s**</span> and <span style = 'color:#79af30'>**1980s**</span>, with competition dominant in the <span style = 'color:#BB5C37'>**2000s**</span> and <span style = 'color:#4B0055'>**2010s**</span>", 
+  labs(title = "Have the motives for wrongdoing in Scooby Doo tv episodes changed over time?",
+       subtitle = "Theft was the most common motive in the <span style = 'color:#128A84'>**1970s**</span> and <span style = 'color:#79af30'>**1980s**</span>, with competition dominant in the <span style = 'color:#BB5C37'>**2000s**</span> and <span style = 'color:#4B0055'>**2010s**</span>", 
        y = NULL,
        x = NULL,
-       caption = "Top 5 motives shown as percent of all motives within decade | Source: kaggle, with thanks to plummye | Tidy Tuesday 2021, Week 29") +
+       caption = "Top 5 motives as a percentage of all motives within decade | Source: kaggle, with thanks to plummye | Tidy Tuesday 2021, Week 29") +
   theme(plot.title = ggtext::element_markdown(),
         plot.subtitle = ggtext::element_markdown(),
         axis.text.y = element_text, hjust = 1) +

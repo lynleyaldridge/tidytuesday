@@ -28,6 +28,7 @@ library(gganimate)
 # https://www.color-hex.com/color-palette/49179
 # https://www.r-bloggers.com/2012/10/palettes-in-r/
 # https://www.stat.ubc.ca/~jenny/STAT545A/block17_colorsGgplot2Qualitative.html
+# https://blog.rstudio.com/2020/11/04/rstudio-1-4-preview-rainbow-parentheses/
 
 # read in data -------------------------------
 
@@ -68,7 +69,7 @@ scoobydoo %>%
   coord_flip() 
 
 scoobydoo %>%
-  filter(motive == "Competition") %>%
+  filter(motive == "Conquer") %>%
   group_by(monster_type) %>%
   summarise
 
