@@ -1,5 +1,9 @@
 # tidytuesday
 
+[2021-week30](https://github.com/rfordatascience/tidytuesday/tree/master/data/2021/2021-07-20)
+
+![](2021/2021-week30/drought_state.png)
+
 [2021-week29](https://github.com/rfordatascience/tidytuesday/tree/master/data/2021/2021-07-13)
 
 ![](2021/2021-week29/motive_decade.png)
