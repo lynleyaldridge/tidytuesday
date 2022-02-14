@@ -19,8 +19,7 @@ tuesdata <- tidytuesdayR::tt_load('2022-01-25')
 ratings <- tuesdata$ratings
 details <- tuesdata$details
 
-
-bgg_reviews <- read.csv(here::here("2022", "2022-week04", "data", "bgg_reviews.csv"))
+bgg_reviews <- read.csv('https://raw.githubusercontent.com/lynleyaldridge/tidytuesday/main/2022/2022-week04/data/bgg_reviews.csv')
 
 two_player_exactly <- 
   full_join(ratings, details, by = 'id') %>%
@@ -112,12 +111,16 @@ two_player_exactly %>%
 # prepare reviews data for use in this project
 
 # bgg_19m_reviews <- read.csv("C:/Users/lynle/Documents/Data/tidytuesday_large/bgg-19m-reviews.csv", colClasses = c(NA, NA, NA, "NULL", NA, NA)) %>%
-#  clean_names()
+#  clean_names() %>%
+
 
 # bgg_reviews <- 
-#    left_join(two_player_exactly, bgg_19m_reviews)
+#   left_join(two_player_exactly, bgg_19m_reviews) %>%
+#   select(name, user, rating)
+
   
 # write_csv(bgg_reviews, here::here("2022", "2022-week04", "data", "bgg_reviews.csv"))
 
 
-
+# interim code
+# bgg_reviews <- read.csv(here::here("2022", "2022-week04", "data", "bgg_reviews.csv"))

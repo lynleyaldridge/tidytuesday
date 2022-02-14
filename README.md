@@ -1,5 +1,11 @@
 # tidytuesday
 
+2022-week04
+
+[data]() | [code](https://github.com/lynleyaldridge/tidytuesday/blob/main/2022/2022-week04/top10twoplayergames.R)
+
+![](2022/2022-week04/top10exactly2players.png)
+
 2021-week30
 
 [data](https://github.com/rfordatascience/tidytuesday/tree/master/data/2021/2021-07-20) | [code: geofaceted bar plots](https://github.com/lynleyaldridge/tidytuesday/blob/main/2021/2021-week30/drought_state.R)
