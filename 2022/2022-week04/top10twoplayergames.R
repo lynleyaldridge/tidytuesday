@@ -108,10 +108,12 @@ two_player_exactly %>%
 # gtsave(filename = here::here("2022", "2022-week04", "top10exactly2players.png"))
 
 
-# prepare reviews data for use in this project
+# prepare reviews data for use in this project - this is how I created bgg_reviews file with only ratings for games in table
+# download bgg-19m-reviews.csv from kaggle website to location of your own choice
 
-# bgg_19m_reviews <- read.csv("C:/Users/lynle/Documents/Data/tidytuesday_large/bgg-19m-reviews.csv", colClasses = c(NA, NA, NA, "NULL", NA, NA)) %>%
-#  clean_names() %>%
+# library(janitor)
+# bgg_19m_reviews <- read.csv("path to your own downloaded version/bgg-19m-reviews.csv", colClasses = c(NA, NA, NA, "NULL", NA, NA)) %>%
+#  clean_names()
 
 
 # bgg_reviews <- 
@@ -120,7 +122,3 @@ two_player_exactly %>%
 
   
 # write_csv(bgg_reviews, here::here("2022", "2022-week04", "data", "bgg_reviews.csv"))
-
-
-# interim code
-# bgg_reviews <- read.csv(here::here("2022", "2022-week04", "data", "bgg_reviews.csv"))
