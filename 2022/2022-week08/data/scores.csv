@@ -1,0 +1,196 @@
+country,score,status,political_rights,civil_liberties,code,region_wb,region_un
+Afghanistan,10,Not Free,1,9,AF,South Asia,Asia
+Albania,67,Partly Free,28,39,AL,Europe & Central Asia,Europe
+Algeria,32,Not Free,10,22,DZ,Middle East & North Africa,Africa
+Andorra,93,Free,38,55,AD,Europe & Central Asia,Europe
+Angola,30,Not Free,10,20,AO,Sub-Saharan Africa,Africa
+Antigua and Barbuda,85,Free,33,52,AG,Latin America & Caribbean,Americas
+Argentina,84,Free,35,49,AR,Latin America & Caribbean,Americas
+Armenia,55,Partly Free,23,32,AM,Europe & Central Asia,Asia
+Australia,95,Free,39,56,AU,East Asia & Pacific,Oceania
+Austria,93,Free,37,56,AT,Europe & Central Asia,Europe
+Azerbaijan,9,Not Free,2,7,AZ,Europe & Central Asia,Asia
+Bahrain,12,Not Free,2,10,BH,Middle East & North Africa,Asia
+Bangladesh,39,Partly Free,15,24,BD,South Asia,Asia
+Barbados,95,Free,38,57,BB,Latin America & Caribbean,Americas
+Belarus,8,Not Free,2,6,BY,Europe & Central Asia,Europe
+Belgium,96,Free,39,57,BE,Europe & Central Asia,Europe
+Belize,87,Free,34,53,BZ,Latin America & Caribbean,Americas
+Benin,59,Partly Free,17,42,BJ,Sub-Saharan Africa,Africa
+Bhutan,61,Partly Free,29,32,BT,South Asia,Asia
+Bolivia,66,Partly Free,27,39,BO,Latin America & Caribbean,Americas
+Bosnia and Herzegovina,53,Partly Free,19,34,BA,Europe & Central Asia,Europe
+Botswana,72,Free,28,44,BW,Sub-Saharan Africa,Africa
+Brazil,73,Free,31,42,BR,Latin America & Caribbean,Americas
+Brunei,28,Not Free,7,21,BN,East Asia & Pacific,Asia
+Bulgaria,79,Free,33,46,BG,Europe & Central Asia,Europe
+Burkina Faso,53,Partly Free,23,30,BF,Sub-Saharan Africa,Africa
+Burundi,14,Not Free,4,10,BI,Sub-Saharan Africa,Africa
+Cabo Verde,92,Free,38,54,CV,Sub-Saharan Africa,Africa
+Cambodia,24,Not Free,5,19,KH,East Asia & Pacific,Asia
+Cameroon,15,Not Free,6,9,CM,Sub-Saharan Africa,Africa
+Canada,98,Free,40,58,CA,North America,Americas
+Central African Republic,7,Not Free,3,4,CF,Sub-Saharan Africa,Africa
+Chad,15,Not Free,1,14,TD,Sub-Saharan Africa,Africa
+Chile,94,Free,38,56,CL,Latin America & Caribbean,Americas
+China,9,Not Free,-2,11,CN,East Asia & Pacific,Asia
+Colombia,64,Partly Free,29,35,CO,Latin America & Caribbean,Americas
+Comoros,42,Partly Free,16,26,KM,Sub-Saharan Africa,Africa
+Costa Rica,91,Free,38,53,CR,Latin America & Caribbean,Americas
+Croatia,85,Free,36,49,HR,Europe & Central Asia,Europe
+Cuba,12,Not Free,1,11,CU,Latin America & Caribbean,Americas
+Cyprus,93,Free,38,55,CY,Europe & Central Asia,Asia
+Czech Republic,91,Free,36,55,CZ,Europe & Central Asia,Europe
+Ivory Coast,49,Partly Free,19,30,CI,Sub-Saharan Africa,Africa
+Democratic Republic of the Congo,19,Not Free,4,15,CD,Sub-Saharan Africa,Africa
+Denmark,97,Free,40,57,DK,Europe & Central Asia,Europe
+Djibouti,24,Not Free,5,19,DJ,Middle East & North Africa,Africa
+Dominica,93,Free,37,56,DM,Latin America & Caribbean,Americas
+Dominican Republic,68,Partly Free,27,41,DO,Latin America & Caribbean,Americas
+Ecuador,71,Free,31,40,EC,Latin America & Caribbean,Americas
+Egypt,18,Not Free,6,12,EG,Middle East & North Africa,Africa
+El Salvador,59,Partly Free,26,33,SV,Latin America & Caribbean,Americas
+Equatorial Guinea,5,Not Free,0,5,GQ,Sub-Saharan Africa,Africa
+Eritrea,3,Not Free,1,2,ER,Sub-Saharan Africa,Africa
+Estonia,94,Free,38,56,EE,Europe & Central Asia,Europe
+Eswatini,17,Not Free,1,16,SZ,Sub-Saharan Africa,Africa
+Ethiopia,23,Not Free,12,11,ET,Sub-Saharan Africa,Africa
+Fiji,58,Partly Free,23,35,FJ,East Asia & Pacific,Oceania
+Finland,100,Free,40,60,FI,Europe & Central Asia,Europe
+France,89,Free,38,51,FR,Europe & Central Asia,Europe
+Gabon,21,Not Free,3,18,GA,Sub-Saharan Africa,Africa
+Georgia,58,Partly Free,22,36,GE,Europe & Central Asia,Asia
+Germany,94,Free,39,55,DE,Europe & Central Asia,Europe
+Ghana,80,Free,35,45,GH,Sub-Saharan Africa,Africa
+Greece,87,Free,37,50,GR,Europe & Central Asia,Europe
+Grenada,89,Free,37,52,GD,Latin America & Caribbean,Americas
+Guatemala,51,Partly Free,21,30,GT,Latin America & Caribbean,Americas
+Guinea,34,Not Free,10,24,GN,Sub-Saharan Africa,Africa
+Guinea-Bissau,43,Partly Free,17,26,GW,Sub-Saharan Africa,Africa
+Guyana,73,Free,30,43,GY,Latin America & Caribbean,Americas
+Haiti,33,Not Free,11,22,HT,Latin America & Caribbean,Americas
+Honduras,47,Partly Free,21,26,HN,Latin America & Caribbean,Americas
+Hungary,69,Partly Free,26,43,HU,Europe & Central Asia,Europe
+Iceland,94,Free,37,57,IS,Europe & Central Asia,Europe
+India,66,Partly Free,33,33,IN,South Asia,Asia
+Indonesia,59,Partly Free,30,29,ID,East Asia & Pacific,Asia
+Iran,14,Not Free,4,10,IR,Middle East & North Africa,Asia
+Iraq,29,Not Free,16,13,IQ,Middle East & North Africa,Asia
+Ireland,97,Free,39,58,IE,Europe & Central Asia,Europe
+Israel,76,Free,34,42,IL,Middle East & North Africa,Asia
+Italy,90,Free,36,54,IT,Europe & Central Asia,Europe
+Jamaica,80,Free,34,46,JM,Latin America & Caribbean,Americas
+Japan,96,Free,40,56,JP,East Asia & Pacific,Asia
+Jordan,33,Not Free,11,22,JO,Middle East & North Africa,Asia
+Kazakhstan,23,Not Free,5,18,KZ,Europe & Central Asia,Asia
+Kenya,48,Partly Free,19,29,KE,Sub-Saharan Africa,Africa
+Kiribati,93,Free,37,56,KI,East Asia & Pacific,Oceania
+Kosovo,56,Partly Free,25,31,NA,Europe & Central Asia,NA
+Kuwait,37,Partly Free,14,23,KW,Middle East & North Africa,Asia
+Kyrgyzstan,27,Not Free,4,23,KG,Europe & Central Asia,Asia
+Laos,13,Not Free,2,11,LA,East Asia & Pacific,Asia
+Latvia,88,Free,37,51,LV,Europe & Central Asia,Europe
+Lebanon,42,Partly Free,13,29,LB,Middle East & North Africa,Asia
+Lesotho,63,Partly Free,27,36,LS,Sub-Saharan Africa,Africa
+Liberia,60,Partly Free,27,33,LR,Sub-Saharan Africa,Africa
+Libya,9,Not Free,1,8,LY,Middle East & North Africa,Africa
+Liechtenstein,90,Free,33,57,LI,Europe & Central Asia,Europe
+Lithuania,89,Free,38,51,LT,Europe & Central Asia,Europe
+Luxembourg,97,Free,38,59,LU,Europe & Central Asia,Europe
+Madagascar,61,Partly Free,27,34,MG,Sub-Saharan Africa,Africa
+Malawi,66,Partly Free,29,37,MW,Sub-Saharan Africa,Africa
+Malaysia,50,Partly Free,20,30,MY,East Asia & Pacific,Asia
+Maldives,40,Partly Free,19,21,MV,South Asia,Asia
+Mali,32,Not Free,8,24,ML,Sub-Saharan Africa,Africa
+Malta,89,Free,35,54,MT,Middle East & North Africa,Europe
+Marshall Islands,93,Free,38,55,MH,East Asia & Pacific,Oceania
+Mauritania,35,Partly Free,14,21,MR,Sub-Saharan Africa,Africa
+Mauritius,86,Free,36,50,MU,Sub-Saharan Africa,Africa
+Mexico,60,Partly Free,27,33,MX,Latin America & Caribbean,Americas
+Micronesia,92,Free,37,55,NA,NA,NA
+Moldova,62,Partly Free,27,35,MD,Europe & Central Asia,Europe
+Monaco,84,Free,27,57,MC,Europe & Central Asia,Europe
+Mongolia,84,Free,36,48,MN,East Asia & Pacific,Asia
+Montenegro,67,Partly Free,26,41,ME,Europe & Central Asia,Europe
+Morocco,37,Partly Free,13,24,MA,Middle East & North Africa,Africa
+Mozambique,43,Partly Free,14,29,MZ,Sub-Saharan Africa,Africa
+Myanmar,9,Not Free,0,9,MM,East Asia & Pacific,Asia
+Namibia,77,Free,31,46,"NA",Sub-Saharan Africa,Africa
+Nauru,77,Free,34,43,NR,East Asia & Pacific,Oceania
+Nepal,57,Partly Free,25,32,NP,South Asia,Asia
+Netherlands,97,Free,39,58,NL,Europe & Central Asia,Europe
+New Zealand,99,Free,40,59,NZ,East Asia & Pacific,Oceania
+Nicaragua,23,Not Free,5,18,NI,Latin America & Caribbean,Americas
+Niger,51,Partly Free,23,28,NE,Sub-Saharan Africa,Africa
+Nigeria,43,Partly Free,20,23,NG,Sub-Saharan Africa,Africa
+North Korea,3,Not Free,0,3,KP,East Asia & Pacific,Asia
+North Macedonia,67,Partly Free,28,39,MK,Europe & Central Asia,Europe
+Norway,100,Free,40,60,NO,Europe & Central Asia,Europe
+Oman,24,Not Free,6,18,OM,Middle East & North Africa,Asia
+Pakistan,37,Partly Free,15,22,PK,South Asia,Asia
+Palau,92,Free,37,55,PW,East Asia & Pacific,Oceania
+Panama,83,Free,35,48,PA,Latin America & Caribbean,Americas
+Papua New Guinea,62,Partly Free,23,39,PG,East Asia & Pacific,Oceania
+Paraguay,65,Partly Free,28,37,PY,Latin America & Caribbean,Americas
+Peru,72,Free,30,42,PE,Latin America & Caribbean,Americas
+Philippines,55,Partly Free,25,30,PH,East Asia & Pacific,Asia
+Poland,81,Free,34,47,PL,Europe & Central Asia,Europe
+Portugal,95,Free,39,56,PT,Europe & Central Asia,Europe
+Qatar,25,Not Free,7,18,QA,Middle East & North Africa,Asia
+Republic of the Congo,17,Not Free,2,15,CG,Sub-Saharan Africa,Africa
+Romania,83,Free,35,48,RO,Europe & Central Asia,Europe
+Russia,19,Not Free,5,14,RU,Europe & Central Asia,Europe
+Rwanda,22,Not Free,8,14,RW,Sub-Saharan Africa,Africa
+Samoa,83,Free,32,51,WS,East Asia & Pacific,Oceania
+San Marino,93,Free,38,55,SM,Europe & Central Asia,Europe
+Saudi Arabia,7,Not Free,1,6,SA,Middle East & North Africa,Asia
+Senegal,68,Partly Free,29,39,SN,Sub-Saharan Africa,Africa
+Serbia,62,Partly Free,21,41,RS,Europe & Central Asia,Europe
+Seychelles,79,Free,34,45,SC,Sub-Saharan Africa,Africa
+Sierra Leone,65,Partly Free,28,37,SL,Sub-Saharan Africa,Africa
+Singapore,47,Partly Free,19,28,SG,East Asia & Pacific,Asia
+Slovakia,90,Free,37,53,SK,Europe & Central Asia,Europe
+Slovenia,90,Free,38,52,SI,Europe & Central Asia,Europe
+Solomon Islands,79,Free,30,49,SB,East Asia & Pacific,Oceania
+Somalia,7,Not Free,1,6,SO,Sub-Saharan Africa,Africa
+South Africa,79,Free,33,46,ZA,Sub-Saharan Africa,Africa
+South Korea,83,Free,33,50,KR,East Asia & Pacific,Asia
+South Sudan,1,Not Free,-3,4,SS,Sub-Saharan Africa,Africa
+Spain,90,Free,37,53,ES,Europe & Central Asia,Europe
+Sri Lanka,55,Partly Free,23,32,LK,South Asia,Asia
+St. Kitts and Nevis,89,Free,35,54,KN,Latin America & Caribbean,Americas
+St. Lucia,92,Free,38,54,LC,Latin America & Caribbean,Americas
+St. Vincent and the Grenadines,91,Free,36,55,VC,Latin America & Caribbean,Americas
+Sudan,10,Not Free,0,10,SD,Sub-Saharan Africa,Africa
+Suriname,79,Free,34,45,SR,Latin America & Caribbean,Americas
+Sweden,100,Free,40,60,SE,Europe & Central Asia,Europe
+Switzerland,96,Free,39,57,CH,Europe & Central Asia,Europe
+Syria,1,Not Free,-3,4,SY,Middle East & North Africa,Asia
+São Tomé and Príncipe,84,Free,35,49,ST,Sub-Saharan Africa,Africa
+Taiwan,94,Free,38,56,TW,East Asia & Pacific,NA
+Tajikistan,8,Not Free,0,8,TJ,Europe & Central Asia,Asia
+Tanzania,34,Partly Free,12,22,TZ,Sub-Saharan Africa,Africa
+Thailand,29,Not Free,5,24,TH,East Asia & Pacific,Asia
+The Bahamas,91,Free,38,53,BS,Latin America & Caribbean,Americas
+The Gambia,47,Partly Free,21,26,GM,Sub-Saharan Africa,Africa
+Timor-Leste,72,Free,33,39,TL,East Asia & Pacific,Asia
+Togo,42,Partly Free,15,27,TG,Sub-Saharan Africa,Africa
+Tonga,79,Free,30,49,TO,East Asia & Pacific,Oceania
+Trinidad and Tobago,82,Free,33,49,TT,Latin America & Caribbean,Americas
+Tunisia,64,Partly Free,26,38,TN,Middle East & North Africa,Africa
+Turkey,32,Not Free,16,16,TR,Europe & Central Asia,Asia
+Turkmenistan,2,Not Free,0,2,TM,Europe & Central Asia,Asia
+Tuvalu,93,Free,37,56,TV,East Asia & Pacific,Oceania
+Uganda,34,Not Free,11,23,UG,Sub-Saharan Africa,Africa
+Ukraine,61,Partly Free,26,35,UA,Europe & Central Asia,Europe
+United Arab Emirates,17,Not Free,5,12,AE,Middle East & North Africa,Asia
+United Kingdom,93,Free,39,54,GB,Europe & Central Asia,Europe
+United States,83,Free,32,51,US,North America,Americas
+Uruguay,97,Free,40,57,UY,Latin America & Caribbean,Americas
+Uzbekistan,11,Not Free,2,9,UZ,Europe & Central Asia,Asia
+Vanuatu,82,Free,33,49,VU,East Asia & Pacific,Oceania
+Venezuela,14,Not Free,1,13,VE,Latin America & Caribbean,Americas
+Vietnam,19,Not Free,3,16,VN,East Asia & Pacific,Asia
+Yemen,9,Not Free,1,8,YE,Middle East & North Africa,Asia
+Zambia,51,Partly Free,21,30,ZM,Sub-Saharan Africa,Africa
+Zimbabwe,28,Not Free,11,17,ZW,Sub-Saharan Africa,Africa
