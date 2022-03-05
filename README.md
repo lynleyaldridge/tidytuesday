@@ -1,8 +1,14 @@
 # tidytuesday
 
+2022-week08
+
+[data](https://github.com/rfordatascience/tidytuesday/blob/master/data/2022/2022-02-22/readme.md) | [code](https://github.com/lynleyaldridge/tidytuesday/blob/main/2022/2022-week8/americas.R)
+
+![](2022/2022-week08/globalfreedom_Americas_2022.png)
+
 2022-week04
 
-[data]() | [code](https://github.com/lynleyaldridge/tidytuesday/blob/main/2022/2022-week04/top10twoplayergames.R)
+[data](https://github.com/rfordatascience/tidytuesday/blob/master/data/2022/2022-01-25/readme.md) | [code](https://github.com/lynleyaldridge/tidytuesday/blob/main/2022/2022-week04/top10twoplayergames.R)
 
 ![](2022/2022-week04/top10exactly2players.png)
 
