@@ -14,7 +14,6 @@ library(ggflags) # for flag images used in chart
 library(patchwork) # for combining plots
 
 # harvesting global freedom scores for 2022 from Freedom House website ----
-# https://freedomhouse.org/countries/freedom-world/scores
 # https://dcl-wrangle.stanford.edu/rvest.html
 # https://www.kaggle.com/sezginildes/reshaping-data-with-tidyr
 # https://community.rstudio.com/t/tidyr-separate-at-first-whitespace/26269
@@ -88,5 +87,6 @@ map + chart + plot_annotation(title = "Global freedom score of countries in the 
                                subtitle = "Based on Freedom in the World's annual global assessment of political rights and civil liberties",
                                caption = "Source: Freedom House | TidyTuesday 2022, Week 8")
 
-ggsave(filename = here::here("2022", "2022-week08", "globalfreedom_Americas_2022.png"))
+# uncomment to save
+# ggsave(filename = here::here("2022", "2022-week08", "globalfreedom_Americas_2022.png"))
 
