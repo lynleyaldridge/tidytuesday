@@ -1,6 +1,7 @@
 
 # load libraries ----------------------------------------------------------
 
+# install.packages('devtools')
 # devtools::install_github('rensa/ggflags')
 
 library(tidyverse)
@@ -40,6 +41,9 @@ scores$region_un <- countrycode(scores$country, "country.name", "un.region.name"
 
 # uncomment to save data
 # write_csv(scores, here::here("2022", "2022-week08", "data", "scores.csv"))
+
+# uncomment to load a copy of this data from my github, instead of rvest scraping above
+# read_csv("https://raw.githubusercontent.com/lynleyaldridge/tidytuesday/main/2022/2022-week08/data/scores.csv")
 
 # americas map ------------------------------------------------------------
 # cropping maps: https://stackoverflow.com/questions/68679777/error-when-trying-to-crop-spatial-extent-using-package-sf
