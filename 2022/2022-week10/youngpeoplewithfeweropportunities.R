@@ -133,9 +133,9 @@ summary_wide %>%
       
       choose_image <- function(x){
         if (x > 0){
-          gt::html(glue("<span style='color:#1134A6;font-face:bold;font-size:10px;'>{x}</span>"), fontawesome::fa("arrow-up", fill = "#1134A6"))
+          gt::html(glue("<span style='color:#1134A6;font-face:bold;font-size:16px;'>{x}</span>"), fontawesome::fa("arrow-up", fill = "#1134A6"))
         } else if (x <= 0){
-          gt::html(glue("<span style='color:#DA2A2A;font-face:bold;font-size:10px;'>{x}</span>"), fontawesome::fa("arrow-down", fill = "#DA2A2A"))
+          gt::html(glue("<span style='color:#DA2A2A;font-face:bold;font-size:16px;'>{x}</span>"), fontawesome::fa("arrow-down", fill = "#DA2A2A"))
         }
       }
       map(change, choose_image)
@@ -146,31 +146,13 @@ summary_wide %>%
               cols = ggplot ~ px(120),
               cols = flag_URL ~ px(30),
               cols = change ~ px(120)) %>%
-  tab_style(
-    style = list(
-      cell_text(color = "red")
-    ),
-    locations = cells_body(
-      columns = change,
-      rows = change <= 0
-    )
-  ) %>%
-  tab_style(
-    style = list(
-      cell_text(color = "blue")
-    ),
-    locations = cells_body(
-      columns = change,
-      rows = change > 0
-    )
-  ) %>%
   cols_align(align = "right",
              columns = 8) %>%
   tab_header(
     title = "Increased participation of young people with fewer opportunities in Erasmus Transnational Youth Meetings",
     subtitle = md("Number of young people with fewer opportunities sent overseas by top 10 sending countries for academic years 2014-2015 to 2019-2020. <br> Ordered by annual change between 2018 and 2019.")) %>%
   tab_source_note(
-    source_note = "Source: Data from data.europa, flag icons from flaticon.com  | TidyTuesday 2022, Week 10")
+    source_note = "Source: Data from data.europa, flag icons from flaticon.com  | TidyTuesday 2022, Week 10") 
 
 # %>%
 
