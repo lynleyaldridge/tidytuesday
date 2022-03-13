@@ -1,3 +1,11 @@
+# code draws on references on gt tables from Thomas Mock
+# https://themockup.blog/posts/2020-10-31-embedding-custom-features-in-gt-tables/
+# https://themockup.blog/posts/2020-09-04-10-table-rules-in-r/#rule-10-add-visualizations-when-appropriate
+
+# flag images taken from https://www.flaticon.com/packs/countrys-flags, following@tashapiro:
+# https://github.com/tashapiro/TidyTuesday/tree/master/2021/W49
+
+
 # load libraries ----------------------------------------------------------
 
 library(tidyverse)
@@ -20,7 +28,7 @@ top10sending <- erasmus %>%
   top_n(10) %>%
   select(-total)
 
-# summary table and plots - sending all years (before I modify) -----------------------------------------------
+# summary table and plots - sending countries all years -----------------------------------------------
 
 summary <- top10sending %>% 
   left_join(erasmus) %>%
@@ -36,10 +44,6 @@ summary <- top10sending %>%
   group_by(sending_country_code, year) %>%
   summarise(value = sum(participants[fewer_opportunities == "Yes"])) %>%
   ungroup()
-
-#add flag images - images taken from https://www.flaticon.com/packs/countrys-flags following@tashapiro 2021/W49
-# https://themockup.blog/posts/2020-10-31-embedding-custom-features-in-gt-tables/
-# https://themockup.blog/posts/2020-09-04-10-table-rules-in-r/#rule-10-add-visualizations-when-appropriate
 
 summary_wide <- summary %>%
   pivot_wider(names_from = "year",
@@ -161,9 +165,9 @@ summary_wide %>%
              columns = 8) %>%
   tab_header(
     title = "Increased participation of young people with fewer opportunities in Erasmus Transnational Youth Meetings",
-    subtitle = "Number of young people with fewer opportunities sent overseas by top 10 sending countries for academic years 2014-2015 to 2019-2020. Ordered by annual change between 2018 and 2019") %>%
+    subtitle = md("Number of young people with fewer opportunities sent overseas by top 10 sending countries for academic years 2014-2015 to 2019-2020. <br> Ordered by annual change between 2018 and 2019.")) %>%
   tab_source_note(
-    source_note = "Source: data.europa | TidyTuesday 2022, Week 10") 
+    source_note = "Source: Data from data.europa, flag icons from flaticon.com  | TidyTuesday 2022, Week 10")
 
 # %>%
 
