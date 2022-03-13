@@ -5,6 +5,9 @@
 # flag images taken from https://www.flaticon.com/packs/countrys-flags, following@tashapiro:
 # https://github.com/tashapiro/TidyTuesday/tree/master/2021/W49
 
+# Interesting discussion on impact of mobility on young people with fewer opportunities:
+# https://www.salto-youth.net/downloads/4-17-3230/ImpactOfMobilityOnYPFO.pdf
+
 
 # load libraries ----------------------------------------------------------
 
