@@ -1,5 +1,11 @@
 # tidytuesday
 
+2022-week11
+
+[data](https://github.com/rfordatascience/tidytuesday/blob/master/data/2022/2022-03-15/readme.md) | [code](https://github.com/lynleyaldridge/tidytuesday/blob/main/2022/2022-week11/colorpalettepackages.R)
+
+![](2022/2022-week11/colorpalettepackages.png)
+
 2022-week10
 
 [data](https://github.com/rfordatascience/tidytuesday/blob/master/data/2022/2022-03-08/readme.md) | [code](https://github.com/lynleyaldridge/tidytuesday/blob/main/2022/2022-week10/youngpeoplewithfeweropportunities.R)
