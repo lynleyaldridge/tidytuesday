@@ -12,8 +12,6 @@ library(here)
 library(webshot)  # may need for exporting table as image
 
 # load and manipulate data ------------------------------------------------
-# do we need rowwise (yes) and ungroup (no?)
-# exact size for --- separators 
 
 tuesdata <- tidytuesdayR::tt_load('2022-01-25')
 ratings <- tuesdata$ratings
@@ -108,8 +106,10 @@ two_player_exactly %>%
 # gtsave(filename = here::here("2022", "2022-week04", "top10exactly2players.png"))
 
 
-# prepare reviews data for use in this project - this is how I created bgg_reviews file with only ratings for games in table
-# download bgg-19m-reviews.csv from kaggle website to location of your own choice
+# to prepare reviews data for use in this project
+# first, download bgg-19m-reviews.csv from kaggle (https://www.kaggle.com/datasets/jvanelteren/boardgamegeek-reviews?select=bgg-19m-reviews.csv) to location of your own choice
+# then, uncomment code below (adding path details) to create a dataset with ratings for each game in our table (from bgg_reviews file available from kaggle) 
+
 
 # library(janitor)
 # bgg_19m_reviews <- read.csv("path to your own downloaded version/bgg-19m-reviews.csv", colClasses = c(NA, NA, NA, "NULL", NA, NA)) %>%
