@@ -32,6 +32,14 @@ data <- colors %>%
     date_r = parse_date_time(date, c("ymd HMS", "md HMS y")),
     date_r = as_date(date_r, tz = NULL))
 
+summary <- data %>%
+  group_by(name) %>%
+  na.omit() %>%
+  summarise(
+    min = min(date_r),
+    updates = n())
+  
+
 # plot --------------------------------------------------------------------
 
 data %>%
