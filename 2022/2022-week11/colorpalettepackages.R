@@ -13,15 +13,14 @@ library(ggtext)
 
 cran <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2022/2022-03-15/cran.csv')
 
-# color palette data sourced from: EmilHvitfeldt
+# color palette data (colorpalettes_data) sourced from EmilHvitfeldt @10 Apr 2022 
 # https://github.com/EmilHvitfeldt/paletteer
 
 
-# list of color packages
+# import list of color palette packages
 
-colors <- readxl::read_xlsx(here("2022", "2022-week11", "data", "colorpalettes.xlsx"),
-                            sheet = "paletteer",
-                            range = "A1:C68") %>%
+colors <- read_csv("https://raw.githubusercontent.com/lynleyaldridge/tidytuesday/main/2022/2022-week11/data/colorpalettes_data.csv",
+                            n_max = 64) %>%
   clean_names()
 
 # join datasets and format dates
