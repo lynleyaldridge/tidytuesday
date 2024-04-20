@@ -62,5 +62,4 @@
 
 ![](2020/2020-week40/plots/by-country.png)
 
-test edit
 
